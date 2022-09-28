@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Day 4 | Form Input</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            outline: 0;
+        }
+        body{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        h2{
+            padding: 10px;
+            margin-left: 250px;
+            
+        }
+        .container{
+            border-radius: 5px;
+            background-color: white;
+            padding: 20px;
+        }
+        .container label{
+            margin: 10px;
+            padding: 10px;
+            text-align: left;
+            font-size: 18px;
+        }
+        .container form input[type=text],[type=email], [type=url], [type=tel], textarea {
+            margin: 10px;
+            width: 50%;
+            padding: 10px;
+            border: 1px solid;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+        .container form input[type=number],[type=date]{
+            margin: 10px;
+            width: 30%;
+            padding: 10px;
+            border: 1px solid;
+            border-radius: 4px;
+        }
+        .container form input[type=radio]{
+            margin-left: 20px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .container form input[type=submit]{
+            background-color: green;
+            color: white;
+            margin: 10px;
+            padding: 8px;
+            border-radius: 10px;
+            width: 150px;
+            height: 50px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .container form input[type=reset]{
+            background-color: green;
+            color: white;
+            margin: 10px;
+            padding: 8px;
+            border-radius: 10px;
+            width: 150px;
+            height: 50px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .container form input[type=submit]:hover{
+            background-color: rgb(157, 214, 160);
+            color: black;
+        }
+    </style>
+</head>
+<body>    
+    <h2>FORM INPUT USER</h2>
+    <div class="container">
+        <form>
+            <label for="fnama">Nama Depan :</label><br>
+            <input type="text" id="fnama" placeholder="Isikan Nama Depan">
+            <br>
+            <label for="lnama">Nama Belakang : </label><br>
+            <input type="text" id="lnama" placeholder="Isikan Nama Belakang">
+            <br>
+            <label for="biografi">Biografi Singkat</label><br>
+            <textarea id="biografi" placeholder="Isikan Tentang Dirimu" style="height:200px;"></textarea>
+            <br>
+            <label for="gender">Jenis Kelamin</label><br/>
+            <input type="radio" id="Laki - laki" value="Laki - laki">
+            <label for="Laki - laki">Laki - laki</label>
+            <input type="radio" id="Perempuan" value="perempuan">
+            <label for="Perempuan">Perempuan</label>
+            <br/>
+            <label for="email">Email</label><br/>
+            <input type="email" id="email" placeholder="Isikan Email valid">
+            <br>
+            <label for="telpon">Nomer Telepon</label><br/>
+            <input type="number" id="telpon" placeholder="Isikan nomer HP">
+            <br>
+            <label for="tgllahir">Tanggal Lahir</label><br>
+            <input type="date" id="tgllahir" placeholder="Isikan Tahun anda">
+            <br>
+            <label for="Usia">Usia</label><br>
+            <input type="number" id="Usia" placeholder="Isikan Tahun anda">
+            <br>
+            <label for="url">URL Sosial Media</label><br>
+            <input type="url" id="url" placeholder="Isikan URL Sosial Media">
+            <br/>
+            <input type="submit" value="Submit">
+            <input type="reset" Value="Reset">
+        </form>
+    </div>
+</body>
+</html>
