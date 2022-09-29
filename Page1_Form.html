@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Day 5 | Form Section</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            outline: 0;
+        }
+        header{
+            border-radius: 10px;
+            width: 50%;
+            padding: 10px;
+            margin: 10px;
+            border-style: double;
+            text-align: center;
+        }
+        nav{
+            background-color: white;
+            width: 50%;
+            margin: 5px 5px 5px 5px;
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            padding: 15px;
+            margin: 0px;
+        }
+        li{
+            list-style: none;
+            display: inline;
+        }
+        li a{
+            color: black;
+        }
+        li a:hover{
+            color: red;
+        }
+        hr{
+            width: 50%;
+            margin-top: 15px;
+        }
+        body{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            
+        }
+        h2{
+            padding: 10px;
+            margin-left: 200px;
+            
+        }
+        .container{
+            border-radius: 5px;
+            background-color: white;
+            padding: 20px;
+        }
+        .container label{
+            margin: 10px;
+            padding: 10px;
+            text-align: left;
+            font-size: 18px;
+        }
+        .container form input[type=text],[type=email], [type=url], [type=tel], textarea {
+            margin: 10px;
+            width: 50%;
+            padding: 10px;
+            border: 1px solid;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+        .container form input[type=number],[type=date]{
+            margin: 10px;
+            width: 30%;
+            padding: 10px;
+            border: 1px solid;
+            border-radius: 4px;
+        }
+        .container form input[type=radio]{
+            margin-left: 20px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .container form input[type=submit]{
+            background-color: green;
+            color: white;
+            margin: 10px;
+            padding: 8px;
+            border-radius: 10px;
+            width: 150px;
+            height: 50px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .container form input[type=reset]{
+            background-color: green;
+            color: white;
+            margin: 10px;
+            padding: 8px;
+            border-radius: 10px;
+            width: 150px;
+            height: 50px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .container form input[type=submit]:hover{
+            background-color: rgb(157, 214, 160);
+            color: black;
+        }
+        footer{
+            margin: 10px 130px;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        function kirim(){
+            var x = document.getElementById("fnama").value;
+            var y = document.getElementById("lnama").value;
+            document.getElementById("nama").innerHTML = "<b>"+x+" "+y+"</b><br/>";
+
+            var a = document.getElementById("tlhr").value;
+            var b = document.getElementById("tgl").value;
+            var c = document.getElementById("Usia").value;
+            document.getElementById("ttl").innerHTML = "<b>"+a+", "+b+" Dan Usiamu Sekarang adalah "+c+" Tahun</b>";
+
+            var d = document.getElementById("alamat").value;
+            document.getElementById("asal").innerHTML = "</b>"+d+"</b>";
+
+            var e = document.querySelector('input[name="gender"]:checked').value;
+            document.getElementById("jenis_kelamin").innerHTML = "<b>"+e+"</b>";
+
+            var f = document.getElementById("email").value;
+            document.getElementById("mail").innerHTML = "<b>"+f+"</b>";
+            
+            var h = document.getElementById("telpon").value;
+            document.getElementById("nomer").innerHTML = "<b>"+h+"</b>";
+
+            var g = document.getElementById("url").value;
+            document.getElementById("link").innerHTML = "<a href="+g+"> Sosial Media</a>";
+
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>The Name of Company</h1>
+    </header>
+    <hr>
+    <nav>
+        <ul>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="shoping.html">Shopping</a></li>
+            <li><a href="forminput.html">Form Input</a></li>
+            <li><a href="#">List Form</a></li>
+            <li><a href="page2_ItemList.html">List Table</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <main>
+        <h2>FORM INPUT USER</h2>
+        <div class="container">
+            <form onsubmit="return false">
+                <label for="fnama">Nama Depan :</label>
+                <label for="lnama" style="margin-left: 190px;">Nama Belakang : </label><br>
+                <input type="text" id="fnama" placeholder="Isikan Nama Depan" style="width: 24%;">
+                <input type="text" id="lnama" placeholder="Isikan Nama Belakang" style="width: 24%;">
+                <br>
+                <label for="tlhr">Tempat Lahir :</label>
+                <label for="tgl" style="margin-left: 130px;">Tanggal Lahir : </label>
+                <label for="Usia" style="margin-left: 60px;">Usia</label><br>
+                <input type="text" id="tlhr" placeholder="Isikan Tempat Lahir" style="width: 20%;">
+                <input type="date" id="tgl" style="width: 15%;">
+                <input type="number" id="Usia" placeholder="Isikan Tahun anda" style="width: 11%;">
+                <br>
+                <label for="alamat">Alamat</label><br>
+                <textarea id="alamat" placeholder="Jl. Aspan No 00 Yogyakarta" style="height:200px;"></textarea>
+                <br>
+                <label>Jenis Kelamin</label><br>
+                <input type="radio" id="laku-laki" value="Laki-laki" name="gender" /> Laki-laki
+                <input type="radio" id="perempuan" value="perempuan" name="gender"/> Perempuan
+                <br/>
+                <label for="email">Email</label><br/>
+                <input type="email" id="email" placeholder="abcd@mail.com">
+                <br>
+                <label for="telpon">Nomer Telepon</label><br/>
+                <input type="tel" id="telpon" placeholder="012-234-4567" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" required>
+                <br>
+                <label for="url">URL Sosial Media</label><br>
+                <input type="url" id="url" placeholder="https://some.url">
+                <br/>
+                <label for="upload">Upload Photos</label><br>
+                <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" style="margin: 10px; padding:10px;">
+                <br>
+                <input type="submit" value="Submit" onclick="kirim()">
+                <input type="reset" Value="Reset">
+            </form>
+        </div>
+        <p>
+            Nama : <p id="nama" style="margin: 15px;"></p>
+            TTL : <p id="ttl" style="margin: 15px;"></p>
+            Alamat : <p id="asal" style="margin: 15px;"></p>
+            Jenis Kelamin : <p id="jenis_kelamin" style="margin: 15px;"></p>
+            Email : <p id="mail" style="margin: 15px;"></p>
+            Nomer Telpon : <p id="nomer" style="margin: 15px;"></p>
+            URL Sosial Media : <p id="link" style="margin: 15px;"></p>
+            Images : <br> <img src="assets/photo_profile.jpeg" style="width: 150px; height:150px; margin: 15px;"><br>
+
+            Lihat Info Selanjutnya, Silahkan <a href="page2_ItemList.html" style="padding: 0px;"> klik</a>
+        </p>
+        
+    </main>
+    <hr>
+    <footer>
+        &copy; Copyright 2022 Website Desaign  By <b>Syaiba Adi Pramudita</b>
+    </footer>
+</body>
+</html>
