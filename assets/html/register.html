@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Day 6 | Register</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            box-sizing: border-box;
+        }
+
+        .judul{
+            margin: auto;
+            padding: 20px;
+            justify-content: center;
+            text-align: center;
+            
+        }
+        .container{
+            margin: auto;
+            padding: 20px;
+            width: 30%;
+            height: 50%;
+            border-style: groove;
+            justify-content: center;
+        }
+        .container form label{
+            margin: 20px 5px;
+        }
+        .container form input[type=email],[type=text],[type=tel]{
+            margin: 20px 5px;
+            padding: 10px;
+            width: 85%;
+            border-radius: 10px;
+        }
+        .container form input[type=radio]{
+            margin: 20px 10px;
+            padding: 10px;
+            font-size: 15px;
+        }
+        .btn-kirim{
+            margin: 20px 50px 15px 130px;
+            padding: 10px;
+            width: 30%;
+            background-color: black;
+            border-radius: 20px;
+        }
+        .btn-kirim a{
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2 class="judul">FORM REGISTRASI BERLANGGANAN</h2>
+    </header>
+    <main>
+        <div class="container">
+            <form>
+                <label for="email" style="margin-top: 10px;">Email</label><br>
+                <input type="email" id="email" name="email" placeholder="abcd@mail.com">
+                <br/>
+                <label for="nama">Nama</label><br/>
+                <input type="text" id="nama" name="nama" placeholder="Syaiba Adi Pramudita">
+                <br/>
+                <label for="telpon">Nomer Telfon</label><br/>
+                <input type="tel" id="telpon" name="telpon" placeholder="085864479332" pattern="[0-9]{12}" required>
+                <br/>
+                <label for="type">Pilih Tipe Akun: </label> <br/>
+                <input type="radio" id="type" value="Free" name="type">Free
+                <input type="radio" id="type" value="Personal" name="type">Personal
+                <input type="radio" id="type" value="Premium" name="type">Premium
+                <br/>
+                <button class="btn-kirim"><a href="profile.html">Kirim</a></button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
