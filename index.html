@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Day 1 | Project 2</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alkalami&display=swap');
+        *{
+            margin: 1px;
+            padding: 1px;
+            box-sizing: border-box;
+        }
+        h1{
+            text-align: center;
+            padding: 10px;
+        }
+        h3{
+            text-align: center;
+            margin-top: 30px;
+        }
+        th#no{
+            width: 50px;
+        }
+        .hobi{
+            border-style: solid;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hobi th{
+            width: 500px;
+            height: 50px;
+        }
+        .hobi th#hobi1{
+            background-color: green;
+            color: white;
+        }
+        .musik{
+            border-style: solid;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .musik th{
+            width: 500px;
+            height: 50px;
+        }
+
+        .musik th#musik-2{
+            background-color: red;
+            color: white;
+        }
+        .film{
+            border-style: solid;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .film th{
+            width: 500px;
+            height: 50px;
+        }
+
+        .film th#film-3{
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TABEL HOBI, MUSIK DAN FILM FAVORIT</h1>
+    </header>
+    <main>
+        <section id="tabel-hobi">
+            <h3>Tabel Hobi</h3>
+            <table border="1" class="hobi">
+                <tr>
+                    <th id="no" style="background-color: green; color:white">1</th>
+                    <th id="hobi1">Olahraga Futsal</th>
+                </tr>
+                <tr>
+                    <th id="no">2</th>
+                    <th id="hobi2">Olahraga Voli</th>
+                </tr>
+                <tr>
+                    <th id="no">3</th>
+                    <th id="hobi3">Bermain Game Online</th>
+                </tr>
+            </table>
+        </section>
+        <section id="tabel-musik">
+            <h3>Tabel Musik</h3>
+            <table border="1" class="musik">
+                <tr>
+                    <th id="no">1</th>
+                    <th id="musik-1">Dat $tick - Rich Brian</th>
+                </tr>
+                <tr>
+                    <th id="no" style="background-color: red; color:white">2</th>
+                    <th id="musik-2">Lathi - Weird Genius</th>
+                </tr>
+                <tr>
+                    <th id="no">3</th>
+                    <th id="musik-3">Hymn for the Weekend - Coldplay</th>
+                </tr>
+            </table>
+        </section>
+        <section id="tabel-musik">
+            <h3>Tabel Film</h3>
+            <table border="1" class="film">
+                <tr>
+                    <th id="no">1</th>
+                    <th id="film-1">Avenger End Game (2019)</th>
+                </tr>
+                <tr>
+                    <th id="no">2</th>
+                    <th id="film-2">Spiderman Now Way Home (2021)</th>
+                </tr>
+                <tr>
+                    <th id="no" style="background-color: blue; color:white">3</th>
+                    <th id="film-3">Docter Strange &quot;The Multiverse of Madnes&quot;(2022)</th>
+                </tr>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
