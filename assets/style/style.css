@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+    text-align: center;
+    margin: 20px;
+}
+.pengenalan{
+    margin: 10px;
+    display: inline;
+}
+
+.pengenalan img{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    margin-left: 60px;
+    margin-top: 25px;
+}
+
+.biografi{
+    display: inline;
+    position: absolute;
+    left: 500px;
+    margin-right: 10px;
+}
+
+.biografi p{
+    text-align: justify;
+    text-indent: 50px;
+}
+
+.awalan{
+    font-size: 30px;
+}
+
+.pertama{
+    font-size: 25px;
+}
+
+.kedua{
+    font-size: 20px;
+}
