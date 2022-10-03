@@ -36,9 +36,14 @@ h1{
 }
 
 .awalan{
-    font-size: 30px;
+    font-size: 70px;
+    float: left;
 }
 
+.paragraf{
+    text-align: justify;
+    
+}
 .pertama{
     font-size: 25px;
 }
