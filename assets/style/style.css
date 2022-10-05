@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1{
+    margin: 20px 0px 0px 0px;
+    text-align: center;
+    font-size: 30px;
+    visibility: visible;
+}
+
+.container1,.container3{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: auto auto 0px;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.container2{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 1rem auto 1rem auto;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 300px;
+    height: 400px;
+    outline: 3px solid grey;
+    margin: 0px 15px 3px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.card-image{
+    width: 290px;
+    height: 200px;
+    margin: auto;
+}
+
+.card h2{
+    text-align: center;
+    padding: 10px;
+}
+
+.card p{
+    text-align: justify;
+    padding: 5px;
+}
+
+.card-image img{
+    width: 270px;
+    height: 200px;
+    margin: 5px 5px 5px 10px;
+    border: 5px solid grey;
+    
+}
+
+.btn-card{
+    margin: 20px;
+    display: block;
+    text-align: center;
+}
+
+.btn-card a{
+    background-color: rgb(38, 156, 141);
+    padding: 15px;
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    width: auto;    
+}
+
+.btn-card a:hover{
+    background-color: white;
+    outline: 2px solid rgb(38, 156, 141);
+    color: black;
+}
+
+.footer{
+    background-color: rgb(17, 117, 104);
+    text-align: center;
+    width: 100vw;
+    height: auto;
+    font-size: 20px;
+    margin: 0px 5px;
+    padding: 20px 10px;
+}
+
+.footer a{
+    text-decoration: none;
+    padding: 10px 2em;
+    color: white;
+}
+
+.footer a:hover{
+    background-color: whitesmoke;
+    color: black;
+    border: 2px solid black;
+    border-radius: 20px;
+}
