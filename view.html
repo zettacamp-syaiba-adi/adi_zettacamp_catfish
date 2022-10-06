@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Day 4</title>
+    <style>
+        *{
+            margin: 5px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            box-sizing: border-box;
+        }
+        header{
+            position: sticky;
+            top:0;
+        }
+        header nav{
+            margin: 0px;
+            padding: 15px;
+            background-color: darkgray;
+            border-style:groove;
+        }
+        header nav ul li{
+            list-style: none;
+            display: inline;
+            font-size: 20px;
+            margin: 0px 30px 0px;
+            
+        }
+
+        header nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        header nav ul li a:hover{
+            color: black;
+        }
+        .container{
+            margin: 10px;
+        }
+        .main1{
+            display: flex;
+            margin: 30px auto 0px;
+        }
+        .main1 img{
+            width: 200px;
+            height: 165px;
+        }
+        .priview{
+            font-size: 15px;
+            text-align: justify;
+        }
+        ol{
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="preview">
+            <div class="container">
+                <section id="vans">
+                    <h2>Sepatu Vans</h2><hr>
+                    <div class="main1">
+                        <img src="/assets/img/vans.jpg">
+                        <p>Pilihan merek sepatu pria paling keren dan terkenal yang pertama yakni bernama Vans. Sapatu Vans sendiri sekarang ini menjadi pilihan favorit pada anak muda yang suka tampil kasual. Sepatu Vans sendiri sangat cocok dikenakan untuk berbagai aktivitas harian hingga olahraga ekstrem, seperti skateboarding, BMX hingga surfing.
+    
+                            Selain modelnya yang simpel dan keren, sepatu dari merek Vans ini juga terbilang kuat. Hal ini dikarenakan Vans membuatnya dari bahan yang berkualitas premium sehingga memiliki ketahanan yang sangat bagus. Desainnya memang cukup trendi, beberapa model sepatu bisa kamu temukan dan menyesuaikannya dengan aktivitas yang akan kamu lakukan.
+                        </p>
+                    </div>
+                </section>
+            </div> 
+            <div class="container">
+                <section id="skecher">
+                    <h2>Sepatu Skecher</h2><hr>
+                    <div class="main1">
+                        <img src="/assets/img/skecher.jpg">
+                        <p>Berikutnya ada merek sepatu Skechers yang juga terkenal di kalangan anak muda kekinian. Modelnya yang keren dan trendi, membuatnya mampu menunjang penampilan casual pada penggunanya. Desainnya yang cukup fleksibel membuatnya juga sangat cocok dikenakan untuk aktivitas sehari-hari.
+
+                            Sepatu Skechers sendiri menyediakan banyak model sepatu keren, kamu bisa menyesuaikannya dengan aktivitas yang akan dilakukan. Brand sepatu asal Amerika Serikat ini memang sudah sangat terkenal, khususnya di Indonesia. Kamu bahkan bisa menemukannya dengan mudah di mall-mall yang ada di Indonesia. Harga banderolnya lumayan terjangkau, cocok untuk kamu yang mencari sepatu berkualitas premium dan dengan harga murah.
+                        </p>
+                    </div>
+                </section>
+            </div> 
+            <div class="container">
+                <section id="asic">
+                    <h2>Sepatu Asic</h2><hr>
+                    <div class="main1">
+                        <img src="https://images.asics.com/is/image/asics/1201A093_100_SR_RT_GLB?$sfcc-product$">
+                        <p>Kali ini ada merek sepatu pria bernama Asics yang juga tidak boleh kamu lewatkan. Sepatu dari Asics mengusung desain yang keren dan dibuat dari bahan berkualitas tinggi. Jadi, tidak perlu diragukan lagi untuk soal kekuatan dari sepatu Asics tersebut, pastinya sangat nyaman dikenakan dan awet. Dirintis pertama kali oleh Kihachiro Onitsuka, ia merupakan pria hebat berkebangsaan Jepang.
+
+                            Model sepatu Asics ini mengusung kesan trendy dan sporty dan ini menjadi ciri khas utamanya. Model yang dihadirkan sudah sangat beragam, sangat cocok untuk anak muda modern dan kekinian. Sepatu Asics juga dibuat dengan teknologi khusus sehingga bisa meningkatkan kenyamanan bagi pengguna, baik untuk kegiatan sehari-hari maupun olahraga.</p>
+                    </div>
+                </section>
+            </div> 
+            <div class="container">
+                <section id="adidas">
+                    <h2>Sepatu Adidas</h2><hr>
+                    <div class="main1">
+                        <img src="https://cf.shopee.co.id/file/a542dc50c260540301c7119fe7e57cf5">
+                        <p>Sebagian besar dari kalian mungkin sudah tidak asing lagi dengan brand sepatu pria paling terkenal satu ini, yakni Adidas. Sudah memulai produksi pada tahun 1920 silam, sepatu Adidas menjadi pilihan favorit bagi banyak orang di seluruh dunia. Kita tahu sepatu Adidas cenderung lebih cocok untuk kegiatan olahraga, mulai dari ringan hingga yang berat. Tidak heran banyak atlet yang memilih sepatu Adidas untuk menunjang kegiatan olahraga tersebut.
+
+                            Selain untuk kegiatan olahraga, Adidas juga menghadirkan model sepatu yang cocok untuk dikenakan sehari-hari. Salah satu ciri khasnya adalah adanya tiga garis pada setiap produk sepatu yang diluncurkannya. Sepatu Adidas juga cocok dijadikan sebagai penunjang fashion, tentunya sangat nyaman saat dikenakan. Kamu yang mencari sepatu untuk lari atau jogging, sepatu dari Adidas sangat cocok untuk dijadikan pilihan.</p>
+                    </div>
+                </section>
+            </div> 
+            <div class="container">
+                <section id="nike">
+                    <h2>Sepatu Nike</h2><hr>
+                    <div class="main1">
+                        <img src="https://images.tokopedia.net/img/cache/700/product-1/2020/9/19/inv/inv_f28b1a5f-b506-4ba4-b0dd-07c530b29a6e_680_680.jpg">
+                        <p>Brand sepatu pria paling terkenal selanjutnya yakni merek sepatu Nike. Sepatu langsung bisa dikenal logo khasnya yang diberi nama Swoosh. Logo ikonik ini juga selalu dihadirkan sebagai hiasan untuk produk sepatunya, apapun model yang diusung. Didirikan pertama kali oleh Philip Knight, sekarang ini brand Nike menjadi salah satu yang paling populer di dunia.
+
+                            Sepatu Nike sendiri cenderung berkesan sporty dan trendy, kebanyakan hadir untuk aktivitas olahraga, mulai dari yang ringan hingga ekstrem. Tidak hanya sepatu olahraga saja, beberapa model sepatu dari Nike dihadirkan untuk kegiatan sehari-hari dengan kesan casual. Beberapa seri sepatu juga dihadirkan dengan menggandeng atlet olahraga terkenal seperti, Michael Jordan, Ronaldo, Tiger Woods dan lain sebagainya.</p>
+                    </div>
+                </section>
+            </div> 
+            <div class="container">
+                <section id="rebook">
+                    <h2>Sepatu Rebook</h2><hr>
+                    <div class="main1">
+                        <img src="https://lzd-img-global.slatic.net/g/ff/kf/Sb3af0d5f3d2345199c44046c7229a39aK.jpg_720x720q80.jpg_.webp">
+                        <p>Kali ini ada merek sepatu Reebok yang juga bisa dijadikan pilihan terbaik bagi kamu yang mencari sepatu keren. Reebok menghadirkan berbagai model sepatu keren yang khusus untuk menunjang aktivitas olahraga, seperti lari, jogging, basket dan lain sebagainya. Tidak hanya menyediakan sepatu olahraga untuk pria saja, mereka juga menghadirkan sepatu untuk wanita.
+
+                            Selain menghadirkan sepatu olahraga, Reebok juga memproduksi sepatu keren dan trendi untuk aktivitas harian. Penampilan akan semakin keren dengan mengenakan sepatu dari Reebok tersebut. Bahan yang digunakan juga berkualitas tinggi, tidak hanya membuatnya sangat kuat tetapi juga memberikan kenyamanan maksimal bagi penggunanya.</p>
+                    </div>
+                </section>
+            </div> 
+            <div class="container">
+                <section id="dc">
+                    <h2>Sepatu DC</h2><hr>
+                    <div class="main1">
+                        <img src="https://lzd-img-global.slatic.net/g/p/4d0cc544d0f13da2df7caca125a8c9f6.jpg_720x720q80.jpg_.webp">
+                        <p>Sepatu pria keren berkutnya bisa kamu jadikan pilihan yakni DC Shoes. Sepatu merek DC Shoes ini sangat cocok dipilih bagi kamu yang suka melakukan kegiatan olahraga, dari yang ringan hingga ekstrem. Dibuat dari bahan berkualitas premium, sepatu DC Shoes ini sangat kuat dan nyaman dikenakan. Mulai dari olahraga skateboard, BMX, snowboard, dan kegiatan olahraga lainnya.
+
+                            DC Shoes sendiri didirikan oleh Damon Way dan Ken Block, keduanya merupakan tokoh yang juga sangat terkenal di dunia olahraga ekstrem. Selain untuk kegiatan olahraga, sepatu DC Shoes juga sangat cocok kok untuk dijadikan outfit harian dengan penampilan yang casuak dan trendi.</p>
+                    </div>
+                </section>
+            </div> 
+            <div class="container">
+                <section id="puma">
+                    <h2>Sepatu Puma</h2><hr>
+                    <div class="main1">
+                        <img src="/assets/img/puma.jpg">
+                        <p>Puma merupakan salah satu merek sepatu yang paling terkenal di dunia, pendirinya adalah Rudo Dassler. Awalnya ia memberi nama brandnya tersebut Rudo, namun seiring berjalannya waktu namanya dirubah menjadi Puma. Ia merupakan salah satu pendiri brand Adidas bersama saudaranya, yakni Adolf Dassler. Namun, akhirnya mereka berpisah dan mendirikan mengelola brandnya masing-masing.
+
+                            Sama seperti Adidas, sepatu Puma juga berfokus untuk produksi sepatu olahraga. Kualitasnya yang sangat bagus, membuatnya menjadi favorit para atlet ternama dunia. Selain sepatu olahraga, Puma juga menghadirkan sepatu pria mode lain. Mereka juga memproduksi sepatu sneakers hingga sepatu casual untuk aktivitas harian.</p>
+                    </div>
+                </section>
+            </div> 
+            <div class="container">
+                <section id="nb">
+                    <h2>Sepatu New Balance</h2><hr>
+                    <div class="main1">
+                        <img src="https://filebroker-cdn.lazada.co.id/kf/Sd4bda1eaa2e34912826b3f30a9ed793f6.jpg">
+                        <p>Sepatu dengan ciri khas simbol N di bagian sampingnya ini juga menjadi pilihan favorit banyak orang di seluruh dunia. Modelnya yang mengusung kesan trendy dan sporty, membuatnya sangat cocok dikenakan sebagai item outfit harianmu. Baik itu saat berkumpul dengan teman, jalan ke mall atau kegiatan harian lainnya. Sepatu New Balance sangat cocok dijadikan pilihan bagi kamu yang suka tampil modis di setiap aktivitas.
+
+                            Selain itu, sepatu New Balance juga sangat cocok digunakan ketika melakukan kegiatan olahraga, seperti jogging, lari, atau yang lainnya. Sepatu New Balance akan memberikan kenyamanan pada kaki pengguna ketika melakukan kegiatan olahraga tersebut. Bahan yang digunakan berkualitas tinggi sehingga membuatnya sangat awet meskipun sering digunakan.</p>
+                    </div>
+                </section>
+            </div>            
+        </div>
+    </main>
+</body>
+</html>
