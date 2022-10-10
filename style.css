@@ -48,6 +48,15 @@ body{
     background-color: lightslategray;
 }
 
+.nav a:active{
+    background-color: gainsboro;
+    color: black;
+}
+
+.active{
+    background-color: gainsboro;
+    color: black;
+}
 .intro{
     display: flex;
     flex-flow: row wrap;
