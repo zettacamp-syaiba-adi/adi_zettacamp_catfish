@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Day 1</title>
+</head>
+<body>
+    <h1>Book Purchase</h1>
+    <form id="purchase" name="purchase">
+        <label for="nama">Nama Buku</label>
+        <input type="text" id="nama" name="nama" required>
+        <br>
+        <label for="qty">Jumlah</label>
+        <input type="number" id="qty" name="qty" required>
+        <br>
+        <label for="price">Harga Buku</label>
+        <input type="number" id="price" name="price" required>
+        <br>
+        <label for="disk">Diskon Buku (%)</label>
+        <input type="number" id="disk" name="disk" required>
+        <br>
+        <input type="submit"  value="Bayar">
+        <input type="button" onclick="details()" value="Details">
+        <input type="reset" value="Bersihkan">
+        <hr>
+        <label for="total">Total Belanjaan Anda</label>
+        <input type="text" id="total" name="total" readonly>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
