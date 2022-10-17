@@ -1,6 +1,6 @@
 var casesatu = [1, 'data', 3, 'result'];
 var hasilcasesatu = '';
-var casedua = ['Bejo', 'has', '4', 'sport', 'car'];
+var casedua = ['Bejo', 'has', 4, 'sport', 'car'];
 var hasilcasedua = '';
 function casepertama() {
     for (var i = 0; i < casesatu.length; i++) {

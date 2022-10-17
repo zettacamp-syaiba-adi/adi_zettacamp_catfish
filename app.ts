@@ -1,7 +1,7 @@
 let casesatu: Array<string | number> = [1, 'data', 3, 'result'];
 let hasilcasesatu:string = '';
 
-let casedua: Array<string> = ['Bejo', 'has', '4', 'sport', 'car'];
+let casedua: Array<string | number> = ['Bejo', 'has', 4, 'sport', 'car'];
 let hasilcasedua:string = '';
 
 function casepertama(): string{
