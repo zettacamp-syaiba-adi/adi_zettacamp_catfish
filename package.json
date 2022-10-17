@@ -1,0 +1,24 @@
+{
+  "name": "adi_zettacamp_catfish",
+  "version": "1.0.0",
+  "description": "Readme Syaiba Adi Pramudita",
+  "main": "app.js",
+  "dependencies": {},
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zettacamp-syaiba-adi/adi_zettacamp_catfish.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zettacamp-syaiba-adi/adi_zettacamp_catfish/issues"
+  },
+  "homepage": "https://github.com/zettacamp-syaiba-adi/adi_zettacamp_catfish#readme"
+}
