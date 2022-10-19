@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="card">
+        <div class="card-image">
+            <img [src]="films.img" width="100px" height="100px" />
+        </div>
+        <h2 [ngStyle]="{backgroundColor: getcolor()}">{{ films.judul }}</h2>
+        <p>{{ films.diskripsi}}</p>
+        <div class="btn-card">
+            <a href="#" (click)="buttonclick()">View Product &rarr;</a>
+        </div>
+    </div>
+</div>
