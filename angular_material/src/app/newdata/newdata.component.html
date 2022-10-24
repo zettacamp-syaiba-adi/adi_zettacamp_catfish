@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <div class="form-group">
+        <label>Nama Anda :</label>
+        <input
+          type="text"
+          class="form-control"
+          #dataName>
+      </div>
+      <div class="form-group">
+        <select class="form-control" #status>
+          <option value="Hadir">Hadir</option>
+          <option value="Izin">Izin</option>
+          <option value="Tanpa Keterangan">Tanpa Keterangan</option>
+        </select>
+      </div>
+      <!-- <button
+        class="btn btn-primary"
+        (click)="onCreateAccount(dataName.value, status.value)">
+        Tambah
+      </button> -->
+      <button mat-raised-button color="primary"
+      (click)="onCreateAccount(dataName.value, status.value)">Tambah</button>
+    </div>
+  </div>
+  
+  

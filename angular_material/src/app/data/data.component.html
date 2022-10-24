@@ -1,0 +1,21 @@
+<div class="row">
+  <mat-card>
+    <mat-card-title>{{data.name}}</mat-card-title>
+    <mat-card-content> Kehadiran {{data.status}}</mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="onSetTo('Hadir')">Hadir</button>
+      <button mat-raised-button color="primary" (click)="onSetTo('Izin')">Izin</button>
+      <button mat-raised-button color="primary" (click)="onSetTo('Tanpa Keterangan')">Tanpa Keterangan</button>
+    </mat-card-actions>
+  </mat-card>
+    <!-- <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <h5>{{ data.name }}</h5>
+      <hr>
+      <p>Kehadiran {{ data.status }}</p>
+      <button class="btn btn-default" (click)="onSetTo('Hadir')">Set to 'Hadir'</button>
+      <button class="btn btn-default" (click)="onSetTo('Izin')">Set to 'Izin'</button>
+      <button class="btn btn-default" (click)="onSetTo('Tanpa Keterangan')">Set to 'Tanpa Keterangan'</button>
+    </div> -->
+  </div>
+  
+  
