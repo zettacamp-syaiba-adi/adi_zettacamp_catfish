@@ -1,0 +1,44 @@
+{
+    "books": [
+        {
+            "_id": "01",
+            "gmb": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//92/MTA-3343547/gramedia-pustaka-utama_mendaki-tangga-yang-salah_full02.jpg",
+            "judul": "Mendaki Tangga Yang Salah",
+            "cetak":{
+                "penulis" : "Eric Barker",
+                "percetakan": "Gramedia",
+                "tanggalcetak": "25 Oktober 2022"
+            }
+        },
+        {
+            "_id": "02",
+            "gmb": "https://cf.shopee.co.id/file/9e36bed3fef68108b695ebf0b176069c",
+            "judul": "Bussines is Fun",
+            "cetak":{
+                "penulis" : "Yohanes G Pauly",
+                "percetakan": "Yudistira",
+                "tanggalcetak": "25 Oktober 2022"
+            }
+        },
+        {
+            "_id": "03",
+            "gmb": "https://cf.shopee.co.id/file/9e36bed3fef68108b695ebf0b176069c",
+            "judul": "Guru Sepanjang Waktu",
+            "cetak":{
+                "penulis" : "Solikhin Abu Izzudin",
+                "percetakan": "Gramedia Bersatu",
+                "tanggalcetak": "25 Oktober 2022"
+            }
+        },
+        {
+            "_id": "04",
+            "gmb": "http://muhamadsafei.com/wp-content/uploads/2020/03/Buku-Best-Seller-Gramedia-Jika-Kita-Tak-Pernah-Jadi-Apa-Apa.jpg",
+            "judul": "Jika Kita tidak pernah Jadi Apa-apa",
+            "cetak":{
+                "penulis" : "Alvi Sharir",
+                "percetakan": "Pustaka Ocian",
+                "tanggalcetak": "25 Oktober 2022"
+            }
+        }
+    ]
+}

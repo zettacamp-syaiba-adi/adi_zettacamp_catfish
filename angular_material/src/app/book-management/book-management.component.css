@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+}
+
+.bl{
+    width: 50%;
+    margin: 10px;
+    justify-content: flex-start;
+    display: flex;
+    flex-flow: row wrap; 
+}
+
+.bd{
+    width: 50%;
+}

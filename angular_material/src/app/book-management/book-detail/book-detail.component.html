@@ -1,0 +1,39 @@
+<!-- <div class="container" *ngIf="selectedBook">
+    <div class="detail">
+        <span>Judul : {{selectedBook.judul}}</span>
+        <span>Penulis : {{ selectedBook.penulis }}</span>
+        <span>Penerbit : {{ selectedBook.cetak.percetakan }}</span>
+        <span>Tanggal Terbit : {{selectedBook.cetak.tanggalcetak}}</span>
+        <hr>
+        <button mat-raised-button color="primary"
+            (click)="closeDetail()">Primary</button>
+    </div>
+</div> -->
+
+<div class="container" *ngIf="selectedBook; else noBookSelected">
+    <mat-card class="example-card">
+        <mat-card-title-group>
+          <mat-card-title> {{ selectedBook.judul }}</mat-card-title>
+          <mat-card-subtitle>Penulis : {{ selectedBook.cetak.penulis }}</mat-card-subtitle>
+          <img mat-card-xl-image src= {{selectedBook.gmb}} >
+        </mat-card-title-group>
+        <mat-card-content>
+          {{selectedBook.cetak.percetakan}}
+        </mat-card-content>
+        <mat-card-content>
+            {{selectedBook.cetak.tanggalcetak}}
+          </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary"
+        (click)="closeDetail()">Tutup</button>
+        </mat-card-actions>
+      </mat-card>
+</div>
+<ng-template #noBookSelected>
+    <mat-card>
+    <mat-card-title
+    >“You dont have any selected book yet, Please select from list of book
+    that available”</mat-card-title
+    >
+    </mat-card>
+    </ng-template>
