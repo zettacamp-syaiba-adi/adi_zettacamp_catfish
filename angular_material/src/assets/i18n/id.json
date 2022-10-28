@@ -1,0 +1,22 @@
+{
+    "userForm": {
+        "id": "ID",
+        "name": "Nama", 
+        "age": "Usia",
+        "gender": "Jenis Kelamin",
+        "email": "Email",
+        "position": "Posisi",
+        "status": "Status",
+        "address": "Alamat",
+        "zipcode": "Pos",
+        "city": "Kota",
+        "country": "Negara",
+        "male": "Laki-laki",
+        "female": "Perempuan",
+        "married": "Menikah",
+        "single": "Lajang"
+    },
+    "actions": {
+        "submit": "Kirim"
+    }
+}

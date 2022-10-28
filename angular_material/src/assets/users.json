@@ -1,0 +1,17 @@
+[
+    {
+        "id": "1",
+        "name": "Adi",
+        "age": 20,
+        "gender": "Male",
+        "email": "syaiba.adi@zettacamp.pro",
+        "position": "Frontend Developer",
+        "status": "Single",
+        "addresses": {
+          "address": "Kalasan",
+          "zipcode": 55571,
+          "city": "Sleman",
+          "country": "Indonesia"
+        }
+    }
+]

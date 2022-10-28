@@ -1,0 +1,44 @@
+.navbar{
+    display: inline-flex;
+    flex-flow: row flex;
+
+    list-style: none;
+    background-color: darkslategray;
+    margin: 0px;
+    width: 100%;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
+.brand{
+    display: block;
+    margin: 10px 0px 10px 10px;
+}
+
+.brand a{
+    color: white;
+    list-style: none;
+    text-decoration: none;
+}
+.nav{
+    display: block;
+    margin: 10px 10px 10px auto;
+    justify-content:right;
+}
+.nav a{
+    color: white;
+    margin: 0px 10px 0px 0px;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.nav a:hover{
+    background-color: lightslategray;
+}
+
+.container{
+    width: 70%;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+}
