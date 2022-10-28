@@ -7,11 +7,13 @@
         "email": "syaiba.adi@zettacamp.pro",
         "position": "Frontend Developer",
         "status": "Single",
-        "addresses": {
-          "address": "Kalasan",
-          "zipcode": 55571,
-          "city": "Sleman",
-          "country": "Indonesia"
-        }
+        "addresses": [
+            {
+                "address": "Kalasan",
+                "zipcode": 55571,
+                "city": "Sleman",
+                "country": "Indonesia"
+              }
+        ]
     }
 ]

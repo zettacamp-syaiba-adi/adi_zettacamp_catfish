@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs';
 import { UserManagementService } from '../user-management.service';
 import { TranslateService } from '@ngx-translate/core';
+import { User } from '../model/user.model';
 
 @Component({
   selector: 'app-user-add',
@@ -20,17 +21,13 @@ export class UserAddComponent implements OnInit {
     email: new FormControl(null),
     position: new FormControl(null),
     status: new FormControl(null),
-    addresses: new FormGroup({
-      address: new FormControl(null),
-      zipcode: new FormControl(null),
-      city: new FormControl(null),
-      country: new FormControl(null)
-    }),
+    addresses: new FormArray([])
   });
 
   isEdit: boolean = false;
 
   selectedLang:any = null;
+  subsciption: any;
 
   constructor(
     private userManagementService: UserManagementService,
@@ -43,14 +40,16 @@ export class UserAddComponent implements OnInit {
     // const id = this.router.snapshot.queryParamMap.get('userId');
     const id = this.activateRouter.snapshot.queryParamMap.get('userId');
     this.isEdit = id != null;
-    console.log(this.isEdit);
     
     if(this.isEdit){
-      this.userManagementService.users
+      this.userManagementService.users$
       .pipe(first((items) => items.length !== 0))
       .subscribe((items) => {
-        const item = items.find((items) => items.id === id);
-        this.setFormValues(item);
+        const item:any = items.find((items) => items.id === id);
+        for(let i = 0; i < item.addresses.length; i++){
+          this.pushForms();
+        }
+        this.userForm.patchValue(item);
       });
     }
   }
@@ -79,6 +78,27 @@ export class UserAddComponent implements OnInit {
 
     //  this.userManagementService.addUserToData(this.userForm.value);
     // console.log(this.userForm.value)
+  }
+
+  get AddressForm(){
+    return this.userForm.get("addresses") as FormArray;
+  }
+
+  pushForms(){
+    this.AddressForm.push(new FormGroup({
+      address: new FormControl(null),
+      zipcode: new FormControl(null),
+      city: new FormControl(null),
+      country: new FormControl(null)
+    }))
+  }
+
+  ngOnDestroy(){
+    this.subsciption && this.subsciption.unsubscribe();
+  }
+
+  removeForms(index: number){
+    this.AddressForm.removeAt(index);
   }
 }
 

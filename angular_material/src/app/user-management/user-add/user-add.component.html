@@ -26,7 +26,7 @@
     </tr></table>
     <table class="example-full-width" cellspacing="0"><tr>
         <td><mat-form-field class="example-full-width" appearance="fill">
-          <mat-label>{{ " userForm.age" | translate }}</mat-label>
+          <mat-label>{{ "userForm.age" | translate }}</mat-label>
           <input matInput formControlName="age">
         </mat-form-field></td>
     </tr></table>
@@ -57,33 +57,42 @@
     </tr></table>
     <table class="example-full-width" cellspacing="0"><tr>
         <td><mat-label>{{"userForm.status" | translate }}</mat-label></td>
-        <td><mat-radio-group aria-label="Status option" FormConstrolName="status">
+        <td><mat-radio-group aria-label="Status option"  FormConstrolName="status">
             <mat-radio-button value="single">{{ "userForm.single" | translate }}</mat-radio-button>
             <mat-radio-button value="Married">{{ "userForm.married" | translate }}</mat-radio-button>
         </mat-radio-group></td>
     </tr></table>
-    <form formGroupName="addresses">
-        <table class="example-full-width" cellspacing="0"><tr>
-            <mat-form-field class="example-full-width" appearance="fill">
-                <mat-label>{{ "userForm.address" | translate }}</mat-label>
-                <textarea matInput formControlName="address"></textarea>
-            </mat-form-field>
-        </tr></table>
-        <table class="example-full-width" cellspacing="0"><tr>
-            <td><mat-form-field class="example-full-width" appearance="fill">
-                <mat-label>{{ "userForm.zipcode" | translate }}</mat-label>
-                <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" formControlName="zipcode">
-                <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+    <form formArrayName="addresses">
+        <div *ngFor="let address of AddressForm.controls; let i = index">
+          <div [formGroupName]="i">
+            <h3>Address {{ i + 1 }}</h3>
+            <table class="example-full-width" cellspacing="0"><tr>
+              <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>{{ "userForm.address" | translate }}</mat-label>
+                  <textarea matInput formControlName="address"></textarea>
+              </mat-form-field>
+            </tr></table>
+            <table class="example-full-width" cellspacing="0"><tr>
+              <td><mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>{{ "userForm.zipcode" | translate }}</mat-label>
+                  <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" formControlName="zipcode">
+                  <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+                </mat-form-field></td>
+              <td><mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>{{ "userForm.city" | translate }}</mat-label>
+                <input matInput placeholder="Ex. San Francisco" formControlName="city">
               </mat-form-field></td>
-            <td><mat-form-field class="example-full-width" appearance="fill">
-              <mat-label>{{ "userForm.city" | translate }}</mat-label>
-              <input matInput placeholder="Ex. San Francisco" formControlName="city">
-            </mat-form-field></td>
-            <td><mat-form-field class="example-full-width" appearance="fill">
-              <mat-label>{{ "userForm.country" | translate }}</mat-label>
-              <input matInput placeholder="Ex. California" formControlName="country">
-            </mat-form-field></td>
-          </tr></table>
+              <td><mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>{{ "userForm.country" | translate }}</mat-label>
+                <input matInput placeholder="Ex. California" formControlName="country">
+              </mat-form-field></td>
+            </tr></table>
+            <button mat-raised-button color="warn" (click)="removeForms(i)"
+              *ngIf="AddressForm.length > 1" >Hapus</button> <br/>
+          </div>
+        </div>
+        <button mat-raised-button color="accent" (click)="pushForms()">Tambahkan Alamat</button>
     </form>
+    <hr>
     <button mat-flat-button color="primary">{{ "actions.submit" | translate }}</button>
 </form>
