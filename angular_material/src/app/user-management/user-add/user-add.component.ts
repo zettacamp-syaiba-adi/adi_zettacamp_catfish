@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs';
 import { UserManagementService } from '../user-management.service';
 import { TranslateService } from '@ngx-translate/core';
 import { User } from '../model/user.model';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-user-add',
@@ -14,13 +15,13 @@ import { User } from '../model/user.model';
 export class UserAddComponent implements OnInit {
 
   userForm:any  = new FormGroup({
-    id: new FormControl(null),
-    name: new FormControl(null),
-    age: new FormControl(null),
-    gender: new FormControl(null),
-    email: new FormControl(null),
-    position: new FormControl(null),
-    status: new FormControl(null),
+    id: new FormControl(null, Validators.required),
+    name: new FormControl(null, Validators.required),
+    age: new FormControl(null, Validators.pattern('[0-9][0-9]')),
+    gender: new FormControl(null, Validators.required),
+    email: new FormControl(null, [Validators.required, Validators.email]),
+    position: new FormControl(null, Validators.required),
+    status: new FormControl(null, Validators.required),
     addresses: new FormArray([])
   });
 
@@ -52,6 +53,16 @@ export class UserAddComponent implements OnInit {
         this.userForm.patchValue(item);
       });
     }
+    else{
+      this.pushForms();
+    }
+
+    this.userForm.get('name').valueChanges.subscribe((input: any) =>{
+      const specialchar = /[^a-z|\s]/i;
+
+      let nama = input.replace(specialchar, '');
+      this.userForm.get('name').patchValue(nama, {emitEvent: false});
+    });
   }
 
   setLanguage(lang: string){
@@ -64,18 +75,44 @@ export class UserAddComponent implements OnInit {
   }
 
   onSubmit(){
-    if (this.isEdit) {
-      this.userManagementService.updateUser(this.userForm.value);
-      // Make form null again
-      this.userForm.reset();
-      this.router.navigate(['/list']);
-    } else {
+    if(this.isEdit){
+      if(this.userForm.valid){
+        this.userManagementService.updateUser(this.userForm.value);
+        Swal.fire('You have been Update','success');
+        this.router.navigate(['/list']);
+      }else{
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Please Input Data with Requirement!'
+        })
+      }
+    }else{
+      console.log(this.userForm)
+     if(this.userForm.valid){
       this.userManagementService.addUserToData(this.userForm.value);
-      // Make form null again
-      this.userForm.reset();
+      Swal.fire('Data has been insert', 'success');
       this.router.navigate(['/list']);
+     }else{
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Please Input Data with Requirement!'
+      })
+     }
     }
-
+   
+    // if (this.isEdit) {
+    //   this.userManagementService.updateUser(this.userForm.value);
+    //   // Make form null again
+    //   this.userForm.reset();
+    //   this.router.navigate(['/list']);
+    // } else {
+    //   this.userManagementService.addUserToData(this.userForm.value);
+    //   // Make form null again
+    //   this.userForm.reset();
+    //   this.router.navigate(['/list']);
+    // }
     //  this.userManagementService.addUserToData(this.userForm.value);
     // console.log(this.userForm.value)
   }
@@ -86,10 +123,10 @@ export class UserAddComponent implements OnInit {
 
   pushForms(){
     this.AddressForm.push(new FormGroup({
-      address: new FormControl(null),
-      zipcode: new FormControl(null),
-      city: new FormControl(null),
-      country: new FormControl(null)
+      address: new FormControl(null, Validators.required),
+      zipcode: new FormControl(null, [Validators.required, Validators.pattern('[0-9][0-9][0-9][0-9][0-9]')]),
+      city: new FormControl(null, Validators.required),
+      country: new FormControl(null, Validators.required)
     }))
   }
 

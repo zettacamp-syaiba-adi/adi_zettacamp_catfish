@@ -15,32 +15,40 @@
     <table class="example-full-width" cellspacing="0"><tr>
         <td><mat-form-field class="example-full-width" appearance="fill">
           <mat-label>{{"userForm.id" | translate }}</mat-label>
-          <input matInput formControlName="id">
+          <input matInput formControlName="id" required>
+          <span
+          *ngIf="!userForm.get('id').valid && userForm.get('id').touched"> ID is Required </span>
         </mat-form-field></td>
     </tr></table>
     <table class="example-full-width" cellspacing="0"><tr>
         <td><mat-form-field class="example-full-width" appearance="fill">
           <mat-label>{{ "userForm.name" | translate }}</mat-label>
-          <input matInput formControlName="name">
+          <input matInput formControlName="name" required>
+          <span
+          *ngIf="!userForm.get('name').valid && userForm.get('name').touched"> Name is Required </span>
         </mat-form-field></td>
     </tr></table>
     <table class="example-full-width" cellspacing="0"><tr>
         <td><mat-form-field class="example-full-width" appearance="fill">
           <mat-label>{{ "userForm.age" | translate }}</mat-label>
-          <input matInput formControlName="age">
+          <input matInput formControlName="age" pattern="[0-9][0-9]" required>
+          <span
+          *ngIf="!userForm.get('age').valid && userForm.get('age').touched"> Number Age is Not Valid </span>
         </mat-form-field></td>
     </tr></table>
     <table class="example-full-width" cellspacing="0"><tr>
         <td><mat-label>{{"userForm.gender" | translate }}</mat-label></td>
-        <td><mat-radio-group aria-label="Gender option" FormConstrolName="gender">
-            <mat-radio-button value="male">{{ "userForm.male" | translate }} </mat-radio-button>
-            <mat-radio-button value="female">{{ "userForm.female" | translate }}</mat-radio-button>
+        <td><mat-radio-group aria-label="Gender option" formControlName="gender">
+            <mat-radio-button value="Male">{{ "userForm.male" | translate }} </mat-radio-button>
+            <mat-radio-button value="Female">{{ "userForm.female" | translate }}</mat-radio-button>
         </mat-radio-group></td>
     </tr></table>
     <table class="example-full-width" cellspacing="0"><tr>
         <td><mat-form-field class="example-full-width" appearance="fill">
           <mat-label>{{ "userForm.email" | translate }}</mat-label>
-          <input matInput formControlName="email">
+          <input matInput formControlName="email" required>
+          <span
+          *ngIf="!userForm.get('email').valid && userForm.get('email').touched"> Email is Required and Must be Valid </span>
         </mat-form-field></td>
     </tr></table>
     <table class="example-full-width" cellspacing="0"><tr>
@@ -48,8 +56,8 @@
         <mat-form-field appearance="fill">
         <mat-label>Position</mat-label>
         <select matNativeControl required formControlName="position">
-            <option value="front-end">Front End</option>
-            <option value="back-end">Back End</option>
+            <option value="frontend">Front End</option>
+            <option value="backend">Back End</option>
             <option value="qa">Quality Assurance</option>
             <option value="lead">Lead Project</option>
         </select>
@@ -57,8 +65,8 @@
     </tr></table>
     <table class="example-full-width" cellspacing="0"><tr>
         <td><mat-label>{{"userForm.status" | translate }}</mat-label></td>
-        <td><mat-radio-group aria-label="Status option"  FormConstrolName="status">
-            <mat-radio-button value="single">{{ "userForm.single" | translate }}</mat-radio-button>
+        <td><mat-radio-group aria-label="Status option"  formControlName="status">
+            <mat-radio-button value="Single">{{ "userForm.single" | translate }}</mat-radio-button>
             <mat-radio-button value="Married">{{ "userForm.married" | translate }}</mat-radio-button>
         </mat-radio-group></td>
     </tr></table>
@@ -70,7 +78,7 @@
               <mat-form-field class="example-full-width" appearance="fill">
                   <mat-label>{{ "userForm.address" | translate }}</mat-label>
                   <textarea matInput formControlName="address"></textarea>
-              </mat-form-field>
+                  </mat-form-field>
             </tr></table>
             <table class="example-full-width" cellspacing="0"><tr>
               <td><mat-form-field class="example-full-width" appearance="fill">
