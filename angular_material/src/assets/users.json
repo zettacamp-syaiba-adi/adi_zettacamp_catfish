@@ -15,5 +15,39 @@
                 "country": "Indonesia"
               }
         ]
+    },
+    {
+        "id": "2",
+        "name": "Mr. Arya Purnama",
+        "age": 21,
+        "gender": "Male",
+        "email": "srya@zettacamp.pro",
+        "position": "Back-end",
+        "status": "Married",
+        "addresses": [
+            {
+                "address": "Depok",
+                "zipcode": 55575,
+                "city": "Sleman",
+                "country": "Indonesia"
+              }
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Crème",
+        "age": 19,
+        "gender": "Female",
+        "email": "Crème@zettacamp.pro",
+        "position": "qa",
+        "status": "Single",
+        "addresses": [
+            {
+                "address": "Kalasan",
+                "zipcode": 55571,
+                "city": "Sleman",
+                "country": "Indonesia"
+              }
+        ]
     }
 ]

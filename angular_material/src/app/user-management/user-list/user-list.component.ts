@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from '../model/user.model';
 import { UserManagementService } from '../user-management.service';
@@ -9,9 +9,10 @@ import { UserManagementService } from '../user-management.service';
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
-
+  @Input() filterName = '';
   users: User[] =[];
 
+  filteredStatus = '';
   constructor(
     private router:Router,
     private userManagementService: UserManagementService

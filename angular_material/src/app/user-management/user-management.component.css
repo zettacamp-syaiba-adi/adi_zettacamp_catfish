@@ -9,6 +9,7 @@
     padding: 10px;
     position: sticky;
     top: 0;
+    z-index: 999;
 }
 .brand{
     display: block;

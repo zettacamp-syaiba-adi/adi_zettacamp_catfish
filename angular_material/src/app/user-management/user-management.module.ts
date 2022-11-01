@@ -17,6 +17,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card'; 
 import { HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { FilterPipe } from './pipe/filter.pipe';
+import { AccentPipe } from './pipe/accent.pipe';
 
 export function HttpLoaderFactory(httpClient: HttpClient){
   return new TranslateHttpLoader(httpClient);
@@ -28,7 +30,9 @@ export function HttpLoaderFactory(httpClient: HttpClient){
     UserListComponent,
     UserAddComponent,
     UserCardComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    FilterPipe,
+    AccentPipe
   ],
   imports: [
     CommonModule,
