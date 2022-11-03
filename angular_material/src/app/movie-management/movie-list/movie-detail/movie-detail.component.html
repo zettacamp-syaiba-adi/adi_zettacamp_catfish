@@ -1,0 +1,18 @@
+<div class="container" *ngIf="selectedMovie; else noBookSelected">
+    <mat-card class="example-card">
+        <mat-card-title-group>
+          <mat-card-title> {{ selectedMovie.judul }}</mat-card-title>
+          <mat-card-subtitle>Penulis : {{ selectedMovie.rilis }}</mat-card-subtitle>
+          <img mat-card-xl-image src= {{selectedMovie.gmbr}} >
+        </mat-card-title-group>
+        <mat-card-actions>
+            <button mat-raised-button color="primary"
+            [routerLink]="['/']">Tutup</button>
+        </mat-card-actions>
+      </mat-card>
+</div>
+<ng-template #noBookSelected>
+    <mat-card>
+    <mat-card-title>“You dont have any selected book yet, Please select from list of bookthat available”</mat-card-title>
+    </mat-card>
+    </ng-template>

@@ -1,0 +1,46 @@
+{
+    "movies":[
+        {
+            "id":1,
+            "gmbr": "https://upload.wikimedia.org/wikipedia/id/thumb/5/54/Fast_and_the_furious_poster.jpg/220px-Fast_and_the_furious_poster.jpg",
+            "judul": "The Fast and the Furious",
+            "rilis": 2001,
+            "actor_id":[1,2,3]
+        },
+        {
+            "id":2,
+            "gmbr": "https://upload.wikimedia.org/wikipedia/id/thumb/9/9d/Two_fast_two_furious_ver5.jpg/220px-Two_fast_two_furious_ver5.jpg",
+            "judul": "2 Fast 2 Furious",
+            "rilis": 2003,
+            "actor_id":[1,4,5]
+        },
+        {
+            "id":3,
+            "gmbr": "https://m.media-amazon.com/images/M/MV5BMTQ2NTMxODEyNV5BMl5BanBnXkFtZTcwMDgxMjA0MQ@@._V1_.jpg",
+            "judul": "The Fast and the Furious: Tokyo Drift",
+            "rilis": 2007,
+            "actor_id":[6,7]
+        },
+        {
+            "id":4,
+            "gmbr": "https://cdn-2.tstatic.net/kaltim/foto/bank/images/fast-five-sinopsis.jpg",
+            "judul": "Fast Five",
+            "rilis": "2016",
+            "actor_id":[1,2,3,4,5,8]
+        },
+        {
+            "id":5,
+            "gmbr": "https://cdn0-production-images-kly.akamaized.net/Y5ib_Hre9YOkCBqcjjvB6B9M6F4=/640x360/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/804584/original/037163800_1422868767-furious-14162365661991584949.jpg",
+            "judul": "Furious 7",
+            "rilis": "2015",
+            "actor_id":[1,2,3,4,5,8,9]
+        },
+        {
+            "id":6,
+            "gmbr": "https://m.media-amazon.com/images/M/MV5BMjI0NmFkYzEtNzU2YS00NTg5LWIwYmMtNmQ1MTU0OGJjOTMxXkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_.jpg",
+            "judul": "Fast & Furious 9: The Fast Saga",
+            "rilis": "2015",
+            "actor_id":[1,2,3,4,5,6,7,8,9,10]
+        }
+    ]
+}
