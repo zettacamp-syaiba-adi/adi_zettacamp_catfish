@@ -1,0 +1,18 @@
+<div class="container">
+    <mat-card class="card">
+      <mat-card-title><b> {{ post.title }} </b></mat-card-title>
+      <!-- <mat-card-subtitle>{{ post.body }}</mat-card-subtitle> -->
+      <mat-card-content>
+        {{ post.body }}
+      </mat-card-content>
+      <mat-card-actions align="start">
+        <button
+          mat-button
+          color="primary"
+          (click)="onEditUser()"
+        >
+          Edit Post
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>

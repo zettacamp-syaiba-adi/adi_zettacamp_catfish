@@ -1,0 +1,28 @@
+<form [formGroup]="postForm" (ngSubmit)="onAddPost(postForm.value)" >
+    <table class="example-full-width" cellspacing="0"><tr>
+        <td><mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>User ID</mat-label>
+          <input matInput formControlName="userId">
+        </mat-form-field></td>
+    </tr></table>
+    <table class="example-full-width" cellspacing="0"><tr>
+        <td><mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>ID</mat-label>
+          <input matInput formControlName="id">
+        </mat-form-field></td>
+    </tr></table>
+    <table class="example-full-width" cellspacing="0"><tr>
+        <td><mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Title</mat-label>
+          <input matInput formControlName="title">
+        </mat-form-field></td>
+    </tr></table>
+    <table class="example-full-width" cellspacing="0"><tr>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Description</mat-label>
+            <textarea matInput formControlName="body"></textarea>
+            </mat-form-field>
+    </tr></table>
+    
+    <button mat-raised-button color="primary">Primary</button>  
+</form>
