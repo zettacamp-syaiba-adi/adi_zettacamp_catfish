@@ -1,0 +1,46 @@
+<!-- <mat-form-field class="filter">
+    <input matInput (keyup)="applyFilter($event)" placeholder="Filter">
+</mat-form-field> -->
+
+<mat-form-field>
+    <input matInput class="form-field" [formControl]="nameFilter" placeholder="Name Filter">
+  </mat-form-field>
+  <br/>
+  <mat-form-field>
+    <input matInput class="form-field" [formControl]="userFilter" placeholder="User Filter">
+  </mat-form-field>
+  <br/>
+  <mat-form-field>
+    <input matInput class="form-field" [formControl]="emailFilter" placeholder="Email Filter">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Toppings</mat-label>
+    <mat-select [formControl]="status">
+      <mat-option *ngFor="let sts of statususer" [value]="sts">{{sts}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+<table mat-table [dataSource]="dataSources">
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.civility}} {{element.last_name}} {{element.first_name}} </td>
+    </ng-container>
+    <ng-container matColumnDef="user_type">
+        <th mat-header-cell *matHeaderCellDef> User Type </th>
+        <td mat-cell *matCellDef="let element"> {{element.company.user_type}} </td>
+    </ng-container>
+    <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+    <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef> Status </th>
+        <td mat-cell *matCellDef="let element">
+            <mat-icon [ngStyle]="{color: 'green'}" *ngIf="element.user_status === 'active'">done</mat-icon>
+            <mat-icon [ngStyle]="{color: 'red'}" *ngIf="element.user_status === 'pending'">close</mat-icon>
+        </td>
+    </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
