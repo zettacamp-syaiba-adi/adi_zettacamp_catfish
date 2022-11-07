@@ -1,0 +1,17 @@
+{
+    "formUser": {
+        "civility": "civility",
+        "last_Name": "Last Name",
+        "first_Name": "First Name",
+        "birthday": "Birthday",
+        "gender": "Gender",
+        "Mr": "Mr",
+        "Mrs": "Mrs",
+        "male": "Male",
+        "female": "Female"
+    },
+    "actions": {
+        "back": "Back",
+        "save": "Save"
+    }
+}

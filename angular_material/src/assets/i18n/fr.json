@@ -1,0 +1,17 @@
+{
+    "formUser": {
+        "civility": "Civilité",
+        "last_Name" : "Nom de Famille",
+        "first_Name" : "Prénom",
+        "birthday": "Date d'Anniversaire",
+        "gender": "Le Genre",
+        "Mr": "Monsieur",
+        "Mrs": "Madame",
+        "male": "mâle",
+        "female": "femelle"
+    },
+    "actions": {
+        "back": "Retour",
+        "save": "Enregistrer"
+    }
+}

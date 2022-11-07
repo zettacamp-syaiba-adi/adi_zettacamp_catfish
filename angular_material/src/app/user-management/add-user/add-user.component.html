@@ -1,0 +1,57 @@
+<div class="forms">
+  <div class="language">
+    <mat-form-field appearance="outline">
+      <mat-label>language</mat-label>
+      <mat-select 
+      [(value)]="selectedLang"
+      #lang
+      (valueChange)="setLanguage(lang.value)">
+        <mat-option value="en">English</mat-option>
+        <mat-option value="fr">France</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+    <mat-dialog-content [formGroup]="formUser">
+        <table class="example-full-width" cellspacing="0"><tr>
+            <td><mat-label>{{"formUser.civility" | translate }}</mat-label></td>
+            <td><mat-radio-group formControlName="civility">
+                <mat-radio-button value="Mr">{{"formUser.Mr" | translate }}</mat-radio-button>
+                <mat-radio-button value="Mrs">{{"formUser.Mrs" | translate }}</mat-radio-button>
+            </mat-radio-group></td>
+        </tr></table>
+        <table class="example-full-width" cellspacing="0"><tr>
+            <td><mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>{{"formUser.first_Name" | translate }}</mat-label>
+              <input matInput formControlName="first_Name">
+            </mat-form-field></td>
+            <td><mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>{{"formUser.last_Name" | translate }}</mat-label>
+              <input matInput formControlName="last_Name">
+            </mat-form-field></td>
+        </tr></table>
+        <table class="example-full-width" cellspacing="0"><tr>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>{{"formUser.birthday" | translate }}</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="birthday">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker touchUi #picker></mat-datepicker>
+              </mat-form-field>              
+        </tr></table>
+        <table class="example-full-width" cellspacing="0"><tr>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>{{"formUser.gender" | translate }}</mat-label>
+                <mat-select formControlName="gender">
+                  <mat-option *ngFor="let gender of cgender" [value]="gender">
+                    {{gender}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>             
+        </tr></table>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-stroked-button color="primary" (click)="onNoClick()">{{"actions.back" | translate }}</button>
+        <button mat-stroked-button color="warn" (click)="onAdd()">{{"actions.save" | translate }}</button>
+    </mat-dialog-actions>
+</div>
+
