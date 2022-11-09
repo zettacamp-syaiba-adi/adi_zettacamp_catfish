@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { SchoolsManagementRoutingModule } from './schools-management-routing.module';
 import { SchoolTableComponent } from './school-table/school-table.component';
 import { SharedModule } from '../shared/shared.module';
-
+import {MatTableModule} from '@angular/material/table'; 
 
 @NgModule({
   declarations: [
@@ -13,7 +13,8 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     SharedModule,
-    SchoolsManagementRoutingModule
+    SchoolsManagementRoutingModule,
+    MatTableModule
   ]
 })
 export class SchoolsManagementModule { }

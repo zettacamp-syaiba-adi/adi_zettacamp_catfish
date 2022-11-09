@@ -6,7 +6,7 @@ import { PromoManagementComponent } from './promo-management.component';
 import { AddPromoFormComponent } from './add-promo-form/add-promo-form.component';
 import { PromoCardListComponent } from './promo-card-list/promo-card-list.component';
 import { SharedModule } from '../shared/shared.module';
-
+import {MatCardModule} from '@angular/material/card'; 
 
 @NgModule({
   declarations: [
@@ -17,7 +17,8 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     SharedModule,
-    PromoManagementRoutingModule
+    PromoManagementRoutingModule,
+    MatCardModule
   ]
 })
 export class PromoManagementModule { }

@@ -4,7 +4,10 @@ import { CommonModule } from '@angular/common';
 import { UsersManagementRoutingModule } from './users-management-routing.module';
 import { UserTableComponent } from './user-table/user-table.component';
 import { SharedModule } from '../shared/shared.module';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input'; 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'; 
 
 @NgModule({
   declarations: [
@@ -13,7 +16,12 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     SharedModule,
-    UsersManagementRoutingModule
+    MatFormFieldModule,
+    UsersManagementRoutingModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatProgressSpinnerModule
   ]
 })
 export class UsersManagementModule { }
