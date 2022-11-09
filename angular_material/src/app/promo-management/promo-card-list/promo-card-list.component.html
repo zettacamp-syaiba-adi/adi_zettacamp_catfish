@@ -5,14 +5,19 @@
           <mat-card-title>{{ promoo.title }}</mat-card-title>
           <mat-card-subtitle>{{ promoo.sub_title }}</mat-card-subtitle>
         </mat-card-header>
-        <img mat-card-image src="{{promoo.image_url}}" >
+        <img mat-card-image src="{{promoo.image_url}}" height="200px" >
         <mat-card-content>
           
             Ref : {{ promoo.ref }}
 
-            Discription : {{ promoo.description}}
           
         </mat-card-content>
+        <mat-card-content>
+          
+
+          Discription : {{ promoo.description}}
+        
+      </mat-card-content>
         <mat-card-actions>
           <button mat-button>Detail</button>
           <button mat-button>Edit</button>

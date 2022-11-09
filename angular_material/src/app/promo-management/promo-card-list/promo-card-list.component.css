@@ -1,8 +1,14 @@
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 10px;
+    gap: 10px;
+  }
 .example-card {
-    max-width: 400px;
-  }
+    width: 300px;
+    height: 500px;
+}
   
-  .example-header-image {
-    background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg');
+.example-header-image {
     background-size: cover;
-  }
+}

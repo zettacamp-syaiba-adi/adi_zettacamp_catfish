@@ -1,3 +1,8 @@
+<div class="add">
+  <h1>list Promo</h1>
+  <button mat-raised-button color="primary" (click)="openFileDialog()">Add Promo</button>
+</div>
+<mat-spinner *ngIf="isLoading"></mat-spinner>
 <div class="list">
   <app-promo-card-list *ngFor="let promoo of promoes"
     [promoo]="promoo"></app-promo-card-list>

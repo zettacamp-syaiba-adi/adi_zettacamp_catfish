@@ -1,1 +1,36 @@
-<p>add-promo-form works!</p>
+<mat-dialog-content [formGroup]="promoForm">
+      <table class="example-full-width" cellspacing="0"><tr>
+        <td><mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Title</mat-label>
+          <input matInput formControlName="title" required>
+        </mat-form-field></td>
+        <td><mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Subtitle</mat-label>
+          <input matInput formControlName="sub_title" required>
+        </mat-form-field></td>
+      </tr></table>
+      
+      <table class="example-full-width" cellspacing="1"><tr>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Ref</mat-label>
+            <input matInput formControlName="ref" required>
+          </mat-form-field>
+        </tr></table>
+        <table class="example-full-width" cellspacing="1"><tr>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Image URL</mat-label>
+              <input matInput formControlName="image_url" required>
+            </mat-form-field>
+          </tr></table>
+      <p>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Discription</mat-label>
+          <textarea matInput placeholder="Discription" formControlName="description" required></textarea>
+        </mat-form-field>
+      </p>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-raised-button color="accent" (click)="onAdd()" [disabled]="!promoForm.valid">Submit</button>
+</mat-dialog-actions>
+  
+  
