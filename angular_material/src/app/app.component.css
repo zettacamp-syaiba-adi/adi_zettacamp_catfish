@@ -1,0 +1,14 @@
+
+.box{
+    box-sizing: border-box;
+}
+.border-box{
+    border: 1px solid black;
+}
+.bg-yellow{
+    background-color: yellow;
+}
+
+.spacing{
+    margin: 10px 0;
+}
