@@ -1,4 +1,4 @@
-<div class="p-grid">
+<!-- <div class="p-grid">
   <div class="p-col-12">
     <a [routerLink]="['/home']">Home</a>
   </div>
@@ -17,4 +17,39 @@
 </div>
 <br>
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
+
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav>
+      <mat-nav-list  (click)="sidenav.close()">
+          <a mat-list-item routerLink="/home">
+              <mat-icon>home</mat-icon>
+              <span>Home</span>
+          </a>
+          <a mat-list-item routerLink="/title">
+              <mat-icon>playlist_add_check</mat-icon>
+              <span>Title</span>
+          </a>
+          <a mat-list-item routerLink="/schools">
+              <mat-icon>school</mat-icon>
+              <span>School</span>
+          </a>
+          <a mat-list-item routerLink="/users">
+            <mat-icon>person_outline</mat-icon>
+            <span>User</span>
+        </a>
+        <a mat-list-item routerLink="/promo">
+          <mat-icon>local_offer</mat-icon>
+          <span>Promo</span>
+      </a>
+      </mat-nav-list>
+  </mat-sidenav>
+  <mat-toolbar class="navatas" color="primary" (click)="sidenav.open()">
+      <button mat-icon-button>
+          <mat-icon>menu</mat-icon>
+      </button>
+      <span class="brand">MOVIE PLAYLISTS</span>
+  </mat-toolbar>
+
+  <router-outlet></router-outlet>
+</mat-sidenav-container>

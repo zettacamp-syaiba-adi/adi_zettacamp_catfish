@@ -9,6 +9,10 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
 
 
+import {MatIconModule} from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav'; 
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
 
 const appRoutes: Routes = [
   {
@@ -53,6 +57,10 @@ const appRoutes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     GraphQLModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule,
+    MatToolbarModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes, {preloadingStrategy: PreloadAllModules }),
   ],
