@@ -1,0 +1,77 @@
+<div class="language">
+  <mat-form-field appearance="outline">
+    <mat-label>language</mat-label>
+    <mat-select 
+    [(value)]="selectedLang"
+    #lang
+    (valueChange)="setLanguage(lang.value)">
+      <mat-option value="en">English</mat-option>
+      <mat-option value="id">Indonesia</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div class="container">
+    <div class="p-grid border-box" style="margin: 10px; padding: 5px; height: auto;">
+        <div class="p-grid p-col-10 border-box p-dir-col-rev p-nogutter p-col-nogutter" style="margin-right: 10px;">
+            <div class="block border-box" style="margin: 3px 5px;">
+                <form [formGroup]="userForm" class="example-form" (ngSubmit)="onAddUser(userForm.value)">
+                    <table class="example-full-width" cellspacing="0"><tr>
+                        <td><mat-form-field class="example-full-width" appearance="fill">
+                          <mat-label>{{"userForm.id"| translate}}</mat-label>
+                          <input matInput formControlName="id">
+                        </mat-form-field></td>
+                    </tr></table>
+                    <table class="example-full-width" cellspacing="0"><tr>
+                        <td><mat-form-field class="example-full-width" appearance="fill">
+                          <mat-label>{{"userForm.name" | translate}}</mat-label>
+                          <input matInput formControlName="name">
+                        </mat-form-field></td>
+                    </tr></table>
+                    <table class="example-full-width" cellspacing="0"><tr>
+                        <td><mat-form-field class="example-full-width" appearance="fill">
+                          <mat-label>{{"userForm.nickname" | translate}}</mat-label>
+                          <input matInput formControlName="nickname">
+                        </mat-form-field></td>
+                    </tr></table>
+                    <table class="example-full-width" cellspacing="0"><tr>
+                        <td><mat-form-field class="example-full-width" appearance="fill">
+                          <mat-label>{{"userForm.email" | translate}}</mat-label>
+                          <input matInput formControlName="email">
+                        </mat-form-field></td>
+                    </tr></table>
+                    <table class="example-full-width" cellspacing="0"><tr>
+                        <td><mat-label>{{"userForm.gender" | translate}}</mat-label></td>
+                        <td><mat-radio-group aria-label="Gender option" formControlName="gender">
+                            <mat-radio-button value="male">{{"userForm.male" | translate}} </mat-radio-button>
+                            <mat-radio-button value="female">{{"userForm.female" | translate}}</mat-radio-button>
+                        </mat-radio-group></td>
+                    </tr></table>
+                    <form formGroupName="address">
+                        <table class="example-full-width" cellspacing="0"><tr>
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label>{{"userForm.address" | translate}}</mat-label>
+                                <textarea matInput formControlName="address"></textarea>
+                            </mat-form-field>
+                        </tr></table>
+                        <table class="example-full-width" cellspacing="0"><tr>
+                            <td><mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label>{{"userForm.zipcode" | translate}}</mat-label>
+                                <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" formControlName="zipcode">
+                                <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+                              </mat-form-field></td>
+                            <td><mat-form-field class="example-full-width" appearance="fill">
+                              <mat-label>{{"userForm.city" | translate}}</mat-label>
+                              <input matInput placeholder="Ex. San Francisco" formControlName="city">
+                            </mat-form-field></td>
+                            <td><mat-form-field class="example-full-width" appearance="fill">
+                              <mat-label>{{"userForm.region" | translate}}</mat-label>
+                              <input matInput placeholder="Ex. California" formControlName="country">
+                            </mat-form-field></td>
+                          </tr></table>
+                    </form>
+                    <button mat-flat-button color="primary" [disabled]="!userForm.valid">{{"action.submit" | translate}}</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

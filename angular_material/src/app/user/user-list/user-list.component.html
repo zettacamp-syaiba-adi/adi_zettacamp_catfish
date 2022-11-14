@@ -1,0 +1,48 @@
+ <div class="p-grid border-box" style="margin: 10px; padding: 5px; height: 100%;">
+    <div class="p-grid p-col-11 border-box p-dir-col-rev p-nogutter p-col-nogutter" style="margin-right: 10px;">
+        <div class="block border-box" style="margin: 3px 5px;">
+            <table mat-table [dataSource]="dataSources" *ngIf="!isLoading" class="mat-elevation-z8">
+
+                <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+              
+                <!-- Position Column -->
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef> Name </th>
+                  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+              
+                <!-- Name Column -->
+                <ng-container matColumnDef="nickname">
+                  <th mat-header-cell *matHeaderCellDef> Nick Name </th>
+                  <td mat-cell *matCellDef="let element"> {{element.nickname}} </td>
+                </ng-container>
+              
+                <!-- Weight Column -->
+                <ng-container matColumnDef="email">
+                  <th mat-header-cell *matHeaderCellDef> Email </th>
+                  <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+                </ng-container>
+              
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="gender">
+                  <th mat-header-cell *matHeaderCellDef> Gender </th>
+                  <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+                </ng-container>
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+              <div class="spinner">
+                <mat-spinner *ngIf="isLoading">
+                </mat-spinner>
+              </div>
+
+              <button mat-flat-button color="primary" (click)="adi()">Qwert</button>
+
+              <p *ngIf="apaya">aksldnkdfnkjdfnksdfn</p>
+        </div>
+    </div>
+</div>
+
+  

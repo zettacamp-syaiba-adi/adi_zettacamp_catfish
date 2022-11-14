@@ -1,0 +1,24 @@
+.navatas{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.brand{
+    margin-left: 20px;
+}
+.nav{
+    display: block;
+    margin: 10px 10px 10px auto;
+    justify-content:right;
+}
+.nav a{
+    color: white;
+    margin: 0px 10px 0px 0px;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.nav a:hover{
+    background-color: lightslategray;
+}

@@ -1,0 +1,18 @@
+{
+    "userForm":{
+        "id": "ID",
+        "name": "Nama",
+        "nickname": "Nama Panggilan",
+        "email": "Surel",
+        "gender": "Jenis Kelamin",
+        "address": "ALamat",
+        "zipcode": "Kode Pos",
+        "city": "Kota",
+        "region": "Provinsi",
+        "male": "Laki - Laki",
+        "female": "Perempuan"
+    },
+    "action":{
+        "submit": "Kirim"
+    }
+}

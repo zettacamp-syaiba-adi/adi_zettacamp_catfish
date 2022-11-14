@@ -1,0 +1,95 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Syaiba Adi Pramudita",
+      "nickname": "Adi",
+      "email": "syaiba.adi@zettacamp.com",
+      "gender": "male",
+      "addresses": {
+        "address": "Kalasan",
+        "zipcode": "55571",
+        "city": "Sleman",
+        "region": "Yogyakarta"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Nur Putri",
+      "nickname": "Nur",
+      "email": "nur.putri@mail.com",
+      "gender": "female",
+      "addresses": {
+        "address": "Depok",
+        "zipcode": "55543",
+        "city": "Sleman",
+        "region": "Yogyakarta"
+      }
+    },
+    {
+      "id": "3",
+      "name": "Duanda Mahaputra",
+      "nickname": "Duanda",
+      "email": "duanda@mail.com",
+      "gender": "male",
+      "address": {
+        "address": "Jogja",
+        "zipcode": "23241",
+        "city": "Jogja",
+        "country": "Jogja"
+      }
+    },
+    {
+      "id": "4",
+      "name": "Anam",
+      "nickname": "Anam",
+      "email": "annam@gmail.com",
+      "gender": "male",
+      "address": {
+        "address": "Jogja",
+        "zipcode": "21312",
+        "city": "Jogja",
+        "country": "Jogja"
+      }
+    },
+    {
+      "id": "5",
+      "name": "Adi",
+      "nickname": "Adii",
+      "email": "adi@gmail.com",
+      "gender": "male",
+      "address": {
+        "address": "Jogja",
+        "zipcode": "23123",
+        "city": "Jogja",
+        "country": "Jogja"
+      }
+    },
+    {
+      "id": "6",
+      "name": "Qwert",
+      "nickname": "Qwer",
+      "email": "adi@gmail.com",
+      "gender": "male",
+      "address": {
+        "address": "sdsdsf",
+        "zipcode": "23243",
+        "city": "wefsdf",
+        "country": "sfdsfsdf"
+      }
+    },
+    {
+      "id": "9",
+      "name": "dkdsfjkfn",
+      "nickname": "sdjnkf",
+      "email": "adi@gmail.com",
+      "gender": "male",
+      "address": {
+        "address": "sdffsdfsd",
+        "zipcode": "12312",
+        "city": "sfsdfs",
+        "country": "sfsdfs"
+      }
+    }
+  ]
+}
